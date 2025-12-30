@@ -53,11 +53,13 @@
             justify-content: center;
             gap: 16px;
             margin-bottom: 24px;
+            flex-wrap: wrap;
         }
 
         .preview img {
             width: 100%;
             max-width: 200px;
+            min-width: 140px;
             border-radius: 8px;
             object-fit: contain;
         }
@@ -102,6 +104,23 @@
             opacity: 0.8;
         }
 
+        /* QR */
+        .qr {
+            text-align: center;
+            margin: 32px 0 16px;
+        }
+
+        .qr img {
+            width: 160px;
+            max-width: 100%;
+        }
+
+        .qr p {
+            font-size: 14px;
+            margin-top: 8px;
+            opacity: 0.85;
+        }
+
         /* DOWNLOAD BUTTON */
         .download-main {
             text-align: center;
@@ -144,14 +163,6 @@
 
         /* RESPONSIVE */
         @media (max-width: 600px) {
-            .preview {
-                justify-content: center;
-            }
-
-            .preview img {
-                max-width: 140px;
-            }
-
             h1 {
                 font-size: 26px;
             }
@@ -160,62 +171,68 @@
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- TITLE -->
-        <div class="title-row">
-            <h1>Otra Ruta</h1>
-            <img src="./images/android.svg" alt="Android" class="android-icon" />
+    <!-- TITLE -->
+    <div class="title-row">
+        <h1>Otra Ruta</h1>
+        <img src="./images/android.svg" alt="Android" class="android-icon" />
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview">
+        <img src="./images/splash.png" alt="Splash" />
+        <img src="./images/map.png" alt="Vista mapa" />
+        <img src="./images/detail.png" alt="Vista detalle" />
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="description">
+        Otra Ruta, es una aplicación financiada por el Ministerio de las Culturas,
+        las Artes y el Patrimonio.
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="instructions">
+        <h2>Cómo instalar la app en Android</h2>
+        <ol>
+            <li>Descarga el archivo APK desde este sitio.</li>
+            <li>Abre el archivo descargado desde la barra de notificaciones o el gestor de archivos.</li>
+            <li>Cuando el sistema lo indique, toca <strong>Configuración</strong> y habilita
+                <em>Permitir desde esta fuente</em>.</li>
+            <li>Regresa a la pantalla de instalación y toca <strong>Instalar</strong>.</li>
+            <li>Una vez finalizado el proceso, abre la aplicación normalmente.</li>
+        </ol>
+
+        <div class="disclaimer">
+            Esta aplicación es segura para instalar. Pronto disponible en App Store y Play Store.
         </div>
+    </div>
 
-        <!-- PREVIEW -->
-        <div class="preview">
-            <img src="./images/splash.png" alt="Splash" />
-            <img src="./images/map.png" alt="Vista mapa" />
-            <img src="./images/detail.png" alt="Vista detalle" />
-        </div>
+    <!-- QR -->
+    <div class="qr">
+        <img src="./images/apk_otra_ruta.png" alt="QR Descargar App" />
+        <p>Escanea este código desde tu teléfono Android</p>
+    </div>
 
-        <!-- DESCRIPTION -->
-        <div class="description">
-            Otra Ruta, es una aplicación financiada por el Ministerio de las Culturas,
-            las Artes y el Patrimonio.
-        </div>
-
-        <!-- INSTRUCTIONS -->
-        <div class="instructions">
-            <h2>Cómo instalar la app en Android</h2>
-            <ol>
-                <li>Descarga el archivo APK desde este sitio.</li>
-                <li>Abre el archivo descargado desde la barra de notificaciones o el gestor de archivos.</li>
-                <li>Cuando el sistema lo indique, toca <strong>Configuración</strong> y habilita
-                    <em>Permitir desde esta fuente</em>.</li>
-                <li>Regresa a la pantalla de instalación y toca <strong>Instalar</strong>.</li>
-                <li>Una vez finalizado el proceso, abre la aplicación normalmente.</li>
-            </ol>
-
-            <div class="disclaimer">
-                Esta aplicación es segura para instalar. Pronto disponible en App Store y Play Store.
-            </div>
-        </div>
-
-        <!-- MAIN DOWNLOAD -->
-        <div class="download-main">
-            <a href="https://github.com/camilolillo/otrarutaandroid/releases/latest/download/app-release.apk">
+    <!-- MAIN DOWNLOAD -->
+    <div class="download-main">
+        <a href="https://github.com/camilolillo/otrarutaandroid/releases/latest/download/app-release.apk">
             Descargar App
         </a>
-        </div>
-
-        <!-- STORES + GOVERNMENT -->
-        <div class="stores">
-            <div class="store-buttons">
-                <img src="./images/play_store.svg" alt="Play Store" />
-                <img src="./images/app_store.svg" alt="App Store" />
-            </div>
-
-            <img src="./images/logo_gobierno.png" alt="Gobierno de Chile" class="gov-logo" />
-        </div>
-
     </div>
+
+    <!-- STORES + GOVERNMENT -->
+    <div class="stores">
+        <div class="store-buttons">
+            <img src="./images/play_store.svg" alt="Play Store" />
+            <img src="./images/app_store.svg" alt="App Store" />
+        </div>
+
+        <img src="./images/logo_gobierno.png" alt="Gobierno de Chile" class="gov-logo" />
+    </div>
+
+</div>
 
 </body>
 </html>
