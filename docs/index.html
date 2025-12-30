@@ -50,21 +50,16 @@
         /* APP PREVIEW */
         .preview {
             display: flex;
-            justify-content: center; /* 🔹 centrado */
+            justify-content: center;
             gap: 16px;
             margin-bottom: 24px;
-            flex-wrap: wrap;
         }
 
         .preview img {
             width: 100%;
-            max-width: 260px;
+            max-width: 200px;
             border-radius: 8px;
             object-fit: contain;
-        }
-
-        .splash {
-            max-width: 320px;
         }
 
         /* DESCRIPTION */
@@ -79,7 +74,7 @@
         /* INSTRUCTIONS */
         .instructions {
             max-width: 700px;
-            margin: 0 auto 32px;
+            margin: 0 auto 24px;
             padding-left: 16px;
             border-left: 4px solid var(--primary-color);
             text-align: left;
@@ -97,7 +92,14 @@
         }
 
         .instructions li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .disclaimer {
+            margin-top: 12px;
+            font-size: 13px;
+            opacity: 0.8;
         }
 
         /* DOWNLOAD BUTTON */
@@ -142,12 +144,12 @@
 
         /* RESPONSIVE */
         @media (max-width: 600px) {
-            .preview img {
-                max-width: 140px;
+            .preview {
+                justify-content: center;
             }
 
-            .splash {
-                max-width: 200px;
+            .preview img {
+                max-width: 140px;
             }
 
             h1 {
@@ -168,26 +170,32 @@
 
         <!-- PREVIEW -->
         <div class="preview">
-            <img src="./images/splash.png" alt="Splash" class="splash" />
+            <img src="./images/splash.png" alt="Splash" />
             <img src="./images/map.png" alt="Vista mapa" />
             <img src="./images/detail.png" alt="Vista detalle" />
         </div>
 
         <!-- DESCRIPTION -->
         <div class="description">
-            Explora rutas, puntos de interés y contenidos multimedia
-            directamente desde tu teléfono.
+            Otra Ruta, es una aplicación financiada por el Ministerio de las Culturas,
+            las Artes y el Patrimonio.
         </div>
 
         <!-- INSTRUCTIONS -->
         <div class="instructions">
             <h2>Cómo instalar la app en Android</h2>
             <ol>
-                <li>Descarga el archivo APK.</li>
-                <li>Abre el archivo descargado.</li>
-                <li>Autoriza la instalación desde fuentes desconocidas.</li>
-                <li>Finaliza la instalación y abre la app.</li>
+                <li>Descarga el archivo APK desde este sitio.</li>
+                <li>Abre el archivo descargado desde la barra de notificaciones o el gestor de archivos.</li>
+                <li>Cuando el sistema lo indique, toca <strong>Configuración</strong> y habilita
+                    <em>Permitir desde esta fuente</em>.</li>
+                <li>Regresa a la pantalla de instalación y toca <strong>Instalar</strong>.</li>
+                <li>Una vez finalizado el proceso, abre la aplicación normalmente.</li>
             </ol>
+
+            <div class="disclaimer">
+                Esta aplicación es segura para instalar. Pronto disponible en App Store y Play Store.
+            </div>
         </div>
 
         <!-- MAIN DOWNLOAD -->
