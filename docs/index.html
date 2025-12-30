@@ -1,60 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Otra Ruta</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otra Ruta Android</title>
+
+    <style>
+        :root {
+            --bg-color: #333333;
+            --primary-color: #D1E48F;
+            --text-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        /* HEADER */
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .android-icon {
+            width: 32px;
+            height: auto;
+        }
+
+        /* APP PREVIEW */
+        .preview {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .preview img {
+            width: 100%;
+            max-width: 260px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        /* DESCRIPTION */
+        .description {
+            max-width: 700px;
+            margin: 0 auto 24px;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* INSTRUCTIONS */
+        .instructions {
+            max-width: 700px;
+            margin: 0 auto 32px;
+            padding-left: 16px;
+            border-left: 4px solid var(--primary-color);
+            text-align: left;
+        }
+
+        .instructions h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+            color: var(--primary-color);
+        }
+
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 6px;
+        }
+
+        /* DOWNLOAD BUTTON */
+        .download-main {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .download-main a {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        /* STORES + GOV */
+        .stores {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .store-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .store-buttons img {
+            height: 40px;
+            width: auto;
+        }
+
+        .gov-logo {
+            height: 48px;
+            width: auto;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .preview {
+                justify-content: center;
+            }
+
+            .preview img {
+                max-width: 140px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="container">
 
-    <!-- Header -->
-    <header class="header">
-      <h1 class="title">Otra Ruta</h1>
-      <img src="assets/android.svg" alt="Android" class="android-icon" />
-    </header>
+    <div class="container">
 
-    <!-- Screens -->
-    <section class="screens">
-      <img src="assets/map.png" alt="Vista mapa" />
-      <img src="assets/detail.png" alt="Vista detalle" />
-    </section>
+        <!-- TITLE -->
+        <div class="title-row">
+            <h1>Otra Ruta</h1>
+            <img src="./images/android.svg" alt="Android" class="android-icon" />
+        </div>
 
-    <!-- Description -->
-    <section class="description">
-      <p>
-        Explora rutas, puntos de interés y contenidos multimedia directamente desde tu teléfono.
-      </p>
-    </section>
+        <!-- PREVIEW -->
+        <div class="preview">
+            <img src="./images/map.png" alt="Vista mapa" />
+            <img src="./images/detail.png" alt="Vista detalle" />
+        </div>
 
-    <!-- Install instructions -->
-    <section class="instructions">
-      <h3>Cómo instalar la app en Android</h3>
-      <ol>
-        <li>Descarga el archivo APK.</li>
-        <li>Abre el archivo descargado.</li>
-        <li>Autoriza la instalación desde fuentes desconocidas.</li>
-        <li>Finaliza la instalación y abre la app.</li>
-      </ol>
-    </section>
+        <!-- DESCRIPTION -->
+        <div class="description">
+            Explora rutas, puntos de interés y contenidos multimedia
+            directamente desde tu teléfono.
+        </div>
 
-    <!-- Download -->
-    <section class="download">
-      <a href="OtraRuta.apk" class="download-btn">Descargar App</a>
-    </section>
+        <!-- INSTRUCTIONS -->
+        <div class="instructions">
+            <h2>Cómo instalar la app en Android</h2>
+            <ol>
+                <li>Descarga el archivo APK.</li>
+                <li>Abre el archivo descargado.</li>
+                <li>Autoriza la instalación desde fuentes desconocidas.</li>
+                <li>Finaliza la instalación y abre la app.</li>
+            </ol>
+        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="stores">
-        <img src="assets/playstore.svg" alt="Play Store" />
-        <img src="assets/appstore.svg" alt="App Store" />
-      </div>
-      <div class="gov">
-        <img src="assets/gobierno.svg" alt="Gobierno" />
-      </div>
-    </footer>
+        <!-- MAIN DOWNLOAD -->
+        <div class="download-main">
+            <a href="./app-release.apk">Descargar App</a>
+        </div>
 
-  </main>
+        <!-- STORES + GOVERNMENT -->
+        <div class="stores">
+            <div class="store-buttons">
+                <img src="./images/play_store.svg" alt="Play Store" />
+                <img src="./images/app_store.svg" alt="App Store" />
+            </div>
+
+            <img src="./images/logo_gobierno.png" alt="Gobierno de Chile" class="gov-logo" />
+        </div>
+
+    </div>
+
 </body>
 </html>
