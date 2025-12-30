@@ -1,157 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Otra Ruta Android</title>
-
-    <style>
-        :root {
-            --bg-color: #333333;
-            --primary-color: #D1E48F;
-            --text-color: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 32px 16px;
-            text-align: center;
-        }
-
-        /* HEADER */
-        .title-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        h1 {
-            font-size: 32px;
-            margin: 0;
-        }
-
-        .android-icon {
-            width: 32px;
-            height: auto;
-        }
-
-        /* APP PREVIEW */
-        .preview {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .preview img {
-            width: 160px;
-            border-radius: 8px;
-        }
-
-        /* DESCRIPTION */
-        .description {
-            max-width: 700px;
-            margin: 0 auto 32px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        /* DOWNLOAD BUTTON */
-        .download-main {
-            margin-bottom: 24px;
-        }
-
-        .download-main a {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 6px;
-        }
-
-        /* STORES + GOV */
-        .stores {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .stores img {
-            height: 40px;
-            width: auto;
-        }
-
-        .gov-logo {
-            height: 48px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            .preview img {
-                width: 130px;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Otra Ruta</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <main class="container">
 
-    <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">Otra Ruta</h1>
+      <img src="assets/android.svg" alt="Android" class="android-icon" />
+    </header>
 
-        <!-- TITLE -->
-        <div class="title-row">
-            <h1>Otra Ruta</h1>
-            <img src="images/android.svg" alt="Android" class="android-icon" />
-        </div>
+    <!-- Screens -->
+    <section class="screens">
+      <img src="assets/map.png" alt="Vista mapa" />
+      <img src="assets/detail.png" alt="Vista detalle" />
+    </section>
 
-        <!-- PREVIEW -->
-        <div class="preview">
-            <img src="images/map.png" alt="Vista mapa" />
-            <img src="images/detail.png" alt="Vista detalle" />
-        </div>
+    <!-- Description -->
+    <section class="description">
+      <p>
+        Explora rutas, puntos de interés y contenidos multimedia directamente desde tu teléfono.
+      </p>
+    </section>
 
-        <!-- DESCRIPTION -->
-        <div class="description">
-            Aplicación creada con financiamiento del Ministerio de las Culturas,
-            las Artes y el Patrimonio.  
-            Otra Ruta permite explorar recorridos culturales y territoriales
-            desde una experiencia simple y accesible.
-        </div>
+    <!-- Install instructions -->
+    <section class="instructions">
+      <h3>Cómo instalar la app en Android</h3>
+      <ol>
+        <li>Descarga el archivo APK.</li>
+        <li>Abre el archivo descargado.</li>
+        <li>Autoriza la instalación desde fuentes desconocidas.</li>
+        <li>Finaliza la instalación y abre la app.</li>
+      </ol>
+    </section>
 
-        <!-- MAIN DOWNLOAD -->
-        <div class="download-main">
-            <a href="app-release.apk">Descargar App</a>
-        </div>
+    <!-- Download -->
+    <section class="download">
+      <a href="OtraRuta.apk" class="download-btn">Descargar App</a>
+    </section>
 
-        <!-- STORES + GOVERNMENT -->
-        <div class="stores">
-            <img src="images/app_store.svg" alt="App Store" />
-            <img src="images/play_store.svg" alt="Play Store" />
-            <img src="images/logo_gobierno.png" alt="Gobierno de Chile" class="gov-logo" />
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="stores">
+        <img src="assets/playstore.svg" alt="Play Store" />
+        <img src="assets/appstore.svg" alt="App Store" />
+      </div>
+      <div class="gov">
+        <img src="assets/gobierno.svg" alt="Gobierno" />
+      </div>
+    </footer>
 
-    </div>
-
+  </main>
 </body>
 </html>
