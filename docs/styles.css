@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.android-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Screens */
+.screens {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.screens img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Description */
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Instructions */
+.instructions {
+  border-left: 3px solid #D1E48F;
+  padding-left: 12px;
+  margin-bottom: 24px;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #D1E48F;
+  font-size: 16px;
+}
+
+.instructions ol {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+/* Download */
+.download {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #D1E48F;
+  color: #333333;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stores img {
+  height: 28px;
+  margin-right: 8px;
+}
+
+.gov img {
+  height: 32px;
+}
